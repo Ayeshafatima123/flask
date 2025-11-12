@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, jsonify
 
 app = Flask(__name__)
 
-# Existing routes
+# Routes
 @app.route('/')
 def home():
     return render_template('index.html')
@@ -19,39 +19,32 @@ def contact():
 def blog():
     return render_template('blog.html')
 
-# ✅ Separate chatbot page
 @app.route('/chatbot')
 def chatbot_page():
     return render_template('chatbot.html')
 
+@app.route('/premium')
+def premium():
+    return "Upgrade to Premium for full AI features!"
+
 # Chatbot API
 @app.route('/chat', methods=['POST'])
 def chat():
-    user_message = request.json.get("message")
+    user_message = request.json.get("message", "")
     if "hello" in user_message.lower():
         bot_response = "Hello! How can I help you today?"
     else:
         bot_response = "This is a demo bot. Ask about AI or site info."
     return jsonify({"response": bot_response})
-@app.route('/premium')
-def premium():
-    return "Upgrade to Premium for full AI features!"
 
-
+# Email subscription
 @app.route('/subscribe', methods=['POST'])
 def subscribe():
     email = request.form['email']
-    # Email ko file me save karte hain
     with open("subscribers.txt", "a") as f:
         f.write(email + "\n")
     return render_template("thankyou.html", email=email)
 
-
-
-
-if __name__ == "__main__":
-    app.run(debug=True)
-
+# Run the app
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)
-
