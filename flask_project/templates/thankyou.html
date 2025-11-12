@@ -1,0 +1,61 @@
+
+{% block title %}Thank You{% endblock %}
+{% block content %}
+<style>
+  body {
+    margin: 0;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4, #a18cd1, #fbc2eb);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+  }
+
+  @keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  .thankyou-box {
+    padding: 100px 40px;
+    background: rgba(0,0,0,0.3);
+    border-radius: 15px;
+    display: inline-block;
+    margin-top: 10%;
+    box-shadow: 0 0 20px rgba(255,255,255,0.2);
+  }
+
+  h1 {
+    font-size: 2.3rem;
+    margin-bottom: 15px;
+  }
+
+  p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }
+
+  a {
+    color: #ffcc00;
+    text-decoration: none;
+    font-weight: bold;
+    background: rgba(255,255,255,0.2);
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+
+  a:hover {
+    background: rgba(255,255,255,0.4);
+  }
+</style>
+
+<div class="thankyou-box">
+  <h1>🎉 Thank You!</h1>
+  <p>Your email <b>{{ email }}</b> has been subscribed.</p>
+  <p>Stay tuned for new AI tools & earning tips 🚀</p>
+  <a href="/">← Back to Home</a>
+</div>
+{% endblock %}

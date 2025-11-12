@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Dark Flask Website</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      animation: gradientBG 10s ease infinite;
+      background-size: 400% 400%;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Navbar */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      background: rgba(0, 0, 0, 0.3);
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(10px);
+    }
+
+    nav h2 {
+      color: #ffcc00;
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffcc00;
+    }
+
+    /* Hero Section */
+    .hero {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 40px;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    }
+
+    .hero p {
+      max-width: 700px;
+      font-size: 1.1rem;
+      line-height: 1.7;
+      opacity: 0.9;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 12px 28px;
+      background: linear-gradient(90deg, #ff8a00, #e52e71);
+      border-radius: 25px;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      transition: transform 0.3s ease;
+    }
+
+    .btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 15px #e52e71;
+    }
+
+    /* Footer */
+    footer {
+      background: rgba(0, 0, 0, 0.3);
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <h2>🔥 My Flask Site</h2>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact">Contact</a></li>
+      <li><a href="blog">Blog</a></li>
+      <li><a href="/chatbot">Chatbot</a></li>
+
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Welcome to My Dark Flask Website!</h1>
+    <p>
+      This is a modern dark-theme Flask website.  
+      You can build blogs, portfolios, tools, or any web service using Flask.  
+      With proper SEO and monetization, it can generate income online.
+    </p>
+    <a href="/about" class="btn">Go to About Page</a>
+  </section>
+</body>
+
+
+
+<!-- Newsletter Subscription Section -->
+<section style="text-align:center; padding:60px; background:rgba(255,255,255,0.1); border-radius:15px; margin:40px;">
+  <h2>📩 Subscribe for AI & Tech Updates</h2>
+  <p>Get free updates, AI tools, and earning tips directly in your inbox.</p>
+
+  <form method="post" action="/subscribe" style="margin-top:20px;">
+    <input type="email" name="email" placeholder="Enter your email" required 
+           style="padding:10px 15px; border-radius:8px; border:none; width:250px;">
+    <button type="submit" 
+            style="padding:10px 20px; border:none; border-radius:8px; background:#ff8a00; color:#fff; cursor:pointer;">
+      Subscribe
+    </button>
+  </form>
+</section>
+<footer>
+    © 2025 My Flask Project | Built with ❤️ in Python & Flask
+</footer>
+</html>

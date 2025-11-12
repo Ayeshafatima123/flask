@@ -1,0 +1,130 @@
+body {
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    color: white;
+    text-align: center;
+    font-family: Arial;
+    padding-top: 50px;
+}
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: rgba(0, 0, 0, 0.4);
+  position: sticky;
+  top: 0;
+}
+
+nav h2 {
+  font-size: 1.4rem;
+  color: #ffcc00;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ffcc00;
+}
+
+.hero {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+}
+
+.hero p {
+  width: 70%;
+  margin: 20px auto;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background: linear-gradient(90deg, #ff8a00, #e52e71);
+  border-radius: 25px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+.page-content {
+  width: 80%;
+  margin: 60px auto;
+  text-align: center;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 300px;
+  margin: 0 auto;
+}
+
+input, textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+}
+
+button {
+  padding: 10px;
+  background: linear-gradient(90deg, #36d1dc, #5b86e5);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+footer {
+  margin-top: auto;
+  text-align: center;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.3);
+  font-size: 0.9rem;
+}
+
+.flash {
+  background-color: #27ae60;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
