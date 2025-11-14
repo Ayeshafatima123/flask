@@ -57,4 +57,12 @@ def home():
     return jsonify({"message": "Flask running on Vercel successfully!"})
 
 def handler(event, context):
-    return app(event, context)
+    return app(event, context
+              from flask import Flask
+
+app = Flask(__name__)
+
+@app.get("/")
+def read_root():
+    return {"Python": "on Vercel"}
+
